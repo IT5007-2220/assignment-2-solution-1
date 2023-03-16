@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>The List that never ends</title>
+    <link rel="stylesheet" href="todo.css">
+    <script src="todo.js" defer></script>
+</head>
+<body onload="bootstrap()">
+    <nav>
+        <ul>
+            <li><a href=" ">Home</a ></li>
+            <li><a href="#add">Add new task</a ></li>
+            <li><a href="#display">Show my Tasks</a ></li>
+        </ul>
+    </nav>
+    <div id="container">
+        <div id="home">
+            <h2>TO DO LIST --- HELP YOU STUDY AND WORK BETTER!</h2>
+            <h2>NOW BEGIN OUR TODO TRIP!</h2>
+        </div>
+        <div id="add">
+            <h2>Add a New Task to the List</h2>
+            <form>
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" required class="form_control">
+                 <label for="priority">Priority:</label>
+                 <select id="priority" name="priority" required class="form_control">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" name="deadline" required class="form_control">
+                <input type="submit" value="Add Task" onclick="addTask()">
+            </form>
+        </div>
+        <div id="display">
+            <table id="outstandings">
+                <thead>
+                    <tr>
+                        <th>Sno</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <table id="completes">
+                <thead>
+                    <tr>
+                        <th>Sno</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
